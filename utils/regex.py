@@ -1,6 +1,6 @@
 # some regexs I used for data validation and parsing
 
-text_regex = r"^[!?a-zA-Zà-úÀ-Ú0-9\s\,\.\-\_]+$"
+text_regex = r"^[/!?a-zA-Zà-úÀ-Ú0-9\s\,\.\-\_]+$"
 link_regex = r"^(http|https)://"
 year_regex = r"^[0-9]{4}$"
 code_regex = r"^[0-9]+$"

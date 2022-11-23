@@ -31,11 +31,10 @@ class Product(models.Model):
     )
 
     promise = models.CharField(
-        max_length=100,
+        max_length=116,
         verbose_name="Promessa",
         null=True,
         blank=True,
-        unique=True,
         validators=[
             RegexValidator(
                 regex=text_regex,
@@ -52,12 +51,10 @@ class Product(models.Model):
     )
 
     cover = models.ImageField(
-        null=False,
-        blank=False,
-        unique=True,
+        null=True,
+        blank=True,
         verbose_name="Capa do produto",
         upload_to="covers/products",
-        default="",
     )
 
     # Foreign Keys and ManyToMany
@@ -97,7 +94,6 @@ class Product(models.Model):
     flyer = models.URLField(
         blank=True,
         null=True,
-        unique=True,
         max_length=300,
         verbose_name="Link do folheto",
         validators=[
@@ -114,7 +110,6 @@ class Product(models.Model):
         blank=True,
         null=True,
         verbose_name="Possui vídeo no youtube?",
-        unique=True,
         validators=[
             URLValidator(
                 regex=link_regex,
