@@ -1,0 +1,15 @@
+version: '4'
+
+services:
+  app:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - '8000:8000'
+    environment:
+      - POSTGRES_NAME=<your_postgres_name>
+      - POSTGRES_USER=<your postgres user>
+      - POSTGRES_PASSWORD=<your_password>
+      - POSTGRES_HOST=<your_host>
