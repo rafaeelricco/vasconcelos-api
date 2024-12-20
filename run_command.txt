@@ -1,1 +1,3 @@
 gunicorn core.wsgi:application --bind 0.0.0.0:9000
+
+# use gunicorn core.wsgi:application --bind 0.0.0.0:9000 -D  for background process
