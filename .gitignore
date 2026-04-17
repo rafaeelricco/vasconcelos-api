@@ -3,3 +3,6 @@ db.sqlite3
 venv
 env
 public
+__pycache__/
+*.py[cod]
+*$py.class
