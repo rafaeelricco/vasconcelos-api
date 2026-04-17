@@ -1,4 +1,3 @@
-
 import os
 from pathlib import Path
 from decouple import config
@@ -47,13 +46,18 @@ MIDDLEWARE = [
 ROOT_URLCONF = "core.urls"
 
 CORS_ALLOWED_ORIGINS = [
-    'http://127.0.0.1',
-    'https://vasconcelosagricola.com.br',
     'http://localhost:3000',
-    'https://vasconcelos-agricola.vercel.app',
-    'http://82.180.173.67:8000/',
-    'https://data-provider.tk'
+    'https://vasconcelosagricola.com.br',
+    'https://api.vasconcelosagricola.com.br',
 ]
+
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://vasconcelosagricola.com.br',
+    'https://api.vasconcelosagricola.com.br',
+]
+
+CORS_ALLOW_CREDENTIALS = True
 
 TEMPLATES = [
     {
